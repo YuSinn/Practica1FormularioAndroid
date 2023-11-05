@@ -15,8 +15,8 @@ class AltaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_alta)
 
         textViewTipo = findViewById(R.id.textViewTipo)
-        textViewApellido = findViewById(R.id.textViewTipo)
-        textViewNombre = findViewById(R.id.textViewTipo)
+        textViewApellido = findViewById(R.id.textViewApellido)
+        textViewNombre = findViewById(R.id.textViewNombre)
 
         var bundleUsuario = intent.getBundleExtra("claseUsuario")
         var usuario = Usuario(bundleUsuario!!)

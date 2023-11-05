@@ -24,20 +24,22 @@ class MainActivity : AppCompatActivity() {
         editTextApellido = findViewById(R.id.editTextApellido)
         editTextNombre = findViewById(R.id.editTextNombre)
         radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        radioGroup.setOnCheckedChangeListener { _, checkedId ->
-            when (checkedId) {
-                R.id.radioAlumno -> {
-                    tipoUsuario = "Alumno"
-                }
-                R.id.radioProfesor -> {
-                    tipoUsuario = "Profesor"
-                }
-            }
-        }
     }
     fun onAltaUsuario(view: View) {
         nombre = editTextNombre.text.toString()
         apellido = editTextApellido.text.toString()
+        val radioButtonId = radioGroup.checkedRadioButtonId
+
+        // Verificar cuál RadioButton está seleccionado
+        when (radioButtonId) {
+            R.id.radioAlumno -> {
+                tipoUsuario = "Alumno"
+            }
+            R.id.radioProfesor -> {
+                tipoUsuario = "Profesor"
+            }
+        }
+
         var usuario = Usuario(nombre,apellido,tipoUsuario)
 
         var mi_intent: Intent = Intent(this, AltaActivity::class.java)

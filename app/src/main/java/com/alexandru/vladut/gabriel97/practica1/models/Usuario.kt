@@ -5,27 +5,8 @@ import android.os.Bundle
 class Usuario {
 
     var nombre:String
-        get() {
-            return nombre
-        }
-        set(value) {
-            nombre = value
-        }
     var apellido:String
-        get() {
-            return apellido
-        }
-        set(value) {
-            apellido = value
-        }
-
     var tipoUsuario:String
-        get() {
-            return tipoUsuario
-        }
-        set(value) {
-            tipoUsuario = value
-        }
 
     constructor(nombre: String, apellido: String, tipoUsuario: String) {
         this.nombre = nombre
